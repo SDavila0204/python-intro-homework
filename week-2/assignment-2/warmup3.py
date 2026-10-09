@@ -25,3 +25,4 @@ c487413 create folders & update instructions
 8b36eac Update README.md
 2eaa21f Initial commit
 
+print("this week, I learned a lot about how to use git, including learning about different commands")
