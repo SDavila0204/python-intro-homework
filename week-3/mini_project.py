@@ -4,7 +4,7 @@ tod = input("What time of day is it? (Morning, afternoon, evening): ").lower()
 activities = {
     "monday": {
         "morning": "Go for a morning run",
-        "afternoon": "Do some work",
+        "afternoon": "Do some homework",
         "evening": "Make some tea"
     },
     "tuesday": {
