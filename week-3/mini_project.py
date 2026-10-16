@@ -2,44 +2,44 @@ day = input("What day of the week is it? (Monday, Tuesday, etc.): ").lower()
 tod = input("What time of day is it? (Morning, afternoon, evening): ").lower()
 
 activities = {
-    "Monday": {
-        "Morning": "Go for a morning run",
-        "Afternoon": "Do some work",
-        "Evening": "Make some tea"
+    "monday": {
+        "morning": "Go for a morning run",
+        "afternoon": "Do some work",
+        "evening": "Make some tea"
     },
-    "Tuesday": {
-        "Morning": "Make some breakfast!",
-        "Afternoon": "Listen to a podcast",
-        "Evening": "relax with a good book or movie"
+    "tuesday": {
+        "morning": "Make some breakfast!",
+        "afternoon": "Listen to a podcast",
+        "evening": "relax with a good book or movie"
     },
-    "Wednesday": {
-        "Morning": "Do some morning stretches",
-        "Afternoon": "Make a fun snack!.",
-        "Evening": "Text a friend"
+    "wednesday": {
+        "morning": "Do some morning stretches",
+        "afternoon": "Make a fun snack!.",
+        "evening": "Text a friend"
     },
-    "Thursday": {
-        "Morning": "Do a puzzle",
-        "Afternoon": "Learn something new",
-        "Evening": "Try out a new recipe"
+    "thursday": {
+        "morning": "Do a puzzle",
+        "afternoon": "Learn something new",
+        "evening": "Try out a new recipe"
     },
-    "Friday": {
-        "Morning": "Make a healthy breakfast",
-        "Afternoon": "catch up with a friend",
-        "Evening": "Relax for a while!"
+    "friday": {
+        "morning": "Make a healthy breakfast",
+        "afternoon": "catch up with a friend",
+        "evening": "Relax for a while!"
     },
-    "Saturday": {
-        "Morning": "Enjoy a nice breakfast",
-        "Afternoon": "Go to the library",
-        "Evening": "Watch a movie"
+    "saturday": {
+        "morning": "Enjoy a nice breakfast",
+        "afternoon": "Go to the library",
+        "evening": "Watch a movie"
     },
-    "Sunday": {
-        "Morning": "Sleep in.",
-        "Afternoon": "Visit the park.",
-        "Evening": "Go to a restaurant"
+    "sunday": {
+        "morning": "Sleep in.",
+        "afternoon": "Visit the park.",
+        "evening": "Go to a restaurant"
     }
 }
 
-if day in activities:
+if day in activities: 
     if tod in activities[day]:
         Suggestion = activities[day][tod]
         print(f"Suggestion: {Suggestion}")

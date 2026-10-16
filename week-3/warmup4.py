@@ -10,6 +10,6 @@ elif number > 0:
 if number % 2:
     print (f"{number} is odd")
 elif number == 0:
-    print("your number is a 0.")
+    print("0 is neither positive nor negative.")
 else:
     print(f"{number} is even")
