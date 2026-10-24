@@ -57,7 +57,7 @@ highScores = []
 
 #for loop to collect the names of students scoring above a 75
 for studentInformation in students:
-    if studentInformation['score'] >= 75:
+    if studentInformation['score'] > 75:
         highScores.append(studentInformation['name'])
 
 print(f"Smartest students: {highScores}")
