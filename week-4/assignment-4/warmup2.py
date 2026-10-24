@@ -2,7 +2,7 @@
 studentInfo = {
     "name": "Carlos",
     "grade": "A",
-    "subject": 95
+    "subjects": 95
 }
 
 for student, info in studentInfo.items():
