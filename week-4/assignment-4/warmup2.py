@@ -2,13 +2,13 @@
 studentInfo = {
     "name": "Carlos",
     "grade": "A",
-    "subjects": 95
+    "subjects": "95"
 }
 
 for student, info in studentInfo.items():
     print(f"Student info: {student}: {info}")
 
-studentInfo["Graduated"] = False
+studentInfo["graduated"] = False
 
 print()
 for student, info in studentInfo.items():
