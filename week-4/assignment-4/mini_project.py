@@ -37,18 +37,19 @@ print(f"Class average: {classAve}")
 #lists all unique subjects
 
 #stores subjects
-subjectList = []
 
-#finds them in data set
+#lists all unique subjects
+
+subjectSet = set()
+
 for studentInformation in students:
-    subjectList.append(studentInformation['subject'])
+    subjectSet.add(studentInformation['subject'])
 
 #filters them out and removes duplicates
-subjectList = set(subjectList)
+subjectList = set(subjectSet)
 
 #prints them out
 print(f"subjects offered: {subjectList}")
-
 
 #lists all scores higher than a 75
 
