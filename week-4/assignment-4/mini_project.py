@@ -11,13 +11,11 @@ students = [
 #loop to find top score
 highestScore = float()
 stuName = ""
-subject = ""
 
 for studentInformation in students:
     if studentInformation["score"] > highestScore:
         highestScore = studentInformation["score"]
         stuName = studentInformation["name"]
-        stuSubject = studentInformation["subject"]
 
 print(f"name: {stuName}, score: {highestScore}")
 
@@ -36,8 +34,6 @@ print(f"Class average: {classAve}")
 
 #lists all unique subjects
 
-#stores subjects
-
 #lists all unique subjects
 
 subjectSet = set()
@@ -45,11 +41,8 @@ subjectSet = set()
 for studentInformation in students:
     subjectSet.add(studentInformation['subject'])
 
-#filters them out and removes duplicates
-subjectList = set(subjectSet)
-
 #prints them out
-print(f"subjects offered: {subjectList}")
+print(f"subjects offered: {subjectSet}")
 
 #lists all scores higher than a 75
 
