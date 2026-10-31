@@ -58,13 +58,13 @@ while True:
             continue
 
     #loop to find searched for number and finds index
-        foundNum = 0
+        foundNum = -1
         for i in range(len(numbers)):
             if numbers[i] == val:
                 foundNum = i
                 break
 
-        if foundNum != 0:
+        if foundNum != -1:
             print(f"{val} found at index {foundNum}")
             print()
         else:
