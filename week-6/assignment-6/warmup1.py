@@ -1,11 +1,11 @@
-def greeting(name, hello= "hello"):
-    print(f"{hello} {name}!!")
+def greet(name, greeting= "Hello"):
+    print(f"{greeting} {name}!!")
 
 #only the name
-greeting("Alex")
+greet("Alex")
 
 #name and custom greeting
-greeting("Alex", "Good morning")
+greet("Alex", "Good morning")
 
 #greeting passed as keyword
-greeting("Alex", "Hi!")
+greet("Alex", "Hi!")

@@ -1,5 +1,5 @@
 #defining minimum
-def mini(numbers):
+def find_mini(numbers):
     if not numbers:
         return None
     min_val = numbers[0]
@@ -10,7 +10,7 @@ def mini(numbers):
     return min_val
 
 #defining maximum
-def maxi(numbers):
+def find_max(numbers):
     #if value not a number, will return none
     if not numbers:
         return None
@@ -39,7 +39,7 @@ def bubble_sort(numbers):
     return arrange
 
 #continously shows menu
-def menu():
+def show_menu():
     print("\n=== number cruncher ===")
     print("1. Minimum Value")
     print("2. Maximum Value")
@@ -55,13 +55,13 @@ def main():
 
     while True:
         #shows the menu on command line
-        choice = menu()
+        choice = show_menu()
 	
 	#when you give a number, it will correspond to the numbers on the menu
         if choice == '1':
-            print(f"The minimum value is {mini(numbers)}")
+            print(f"The minimum value is {find_mini(numbers)}")
         elif choice == '2':
-            print(f"The maximum value is {maxi(numbers)}")
+            print(f"The maximum value is {find_max(numbers)}")
         elif choice == '3':
             try:
                 target = int(input("Enter a number from the list, please: "))
