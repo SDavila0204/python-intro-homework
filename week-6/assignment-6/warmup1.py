@@ -8,4 +8,4 @@ greet("Alex")
 greet("Alex", "Good morning")
 
 #greeting passed as keyword
-greet("Alex", "Hi!")
+greet("Alex", greeting="Hi")

@@ -1,5 +1,5 @@
 #defining minimum
-def find_mini(numbers):
+def find_min(numbers):
     if not numbers:
         return None
     min_val = numbers[0]
@@ -59,7 +59,7 @@ def main():
 	
 	#when you give a number, it will correspond to the numbers on the menu
         if choice == '1':
-            print(f"The minimum value is {find_mini(numbers)}")
+            print(f"The minimum value is {find_min(numbers)}")
         elif choice == '2':
             print(f"The maximum value is {find_max(numbers)}")
         elif choice == '3':
