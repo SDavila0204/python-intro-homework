@@ -15,7 +15,6 @@ foodExpenses = []
 #reads csv file
 with open(dataExpenses, mode='r', encoding='utf-8') as file:
 	reader = csv.DictReader(file)
-	
 	#filters list down to 'food'
 	for row in reader:
 		if row['category'].strip == 'Food':
@@ -29,6 +28,7 @@ todayDate = date.today().strftime('%B%d, %Y')
 
 totalFood = 0.0
 
+#writes the report
 with open(foodReport, 'w', encoding='utf-8') as report:
 	report.write(f"Food Expense Report:")
 
@@ -36,4 +36,5 @@ with open(foodReport, 'w', encoding='utf-8') as report:
 		report.write(f"{expense['date']}: {expense['amount']:.2f}\n")
 	report.write(f"Total: {totalFood:.2f}\n")
 
+#prints out actual report
 print(f"Report has been written to {foodReport}")
