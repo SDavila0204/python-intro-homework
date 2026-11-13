@@ -11,6 +11,7 @@ if not os.path.exists(dataExpenses):
 	exit()
 
 foodExpenses = []
+totalFood = 0.0
 
 #reads csv file
 with open(dataExpenses, mode='r', encoding='utf-8') as file:
@@ -24,17 +25,14 @@ with open(dataExpenses, mode='r', encoding='utf-8') as file:
 			totalFood += row['amount']
 
 #gets today's date
-todayDate = date.today().strftime('%B%d, %Y')
-
-totalFood = 0.0
+todayDate = date.today().strftime('%B %d, %Y')
 
 #writes the report
-with open(foodReport, 'w', encoding='utf-8') as report:
-	report.write(f"Food Expense Report:")
-
+with open(foodReport, 'w', encoding='utf-8') as report: 
+	report.write(f"Food Expense Report — generated {todayDate}\n")
 	for expense in foodExpenses:
 		report.write(f"{expense['date']}: {expense['amount']:.2f}\n")
-	report.write(f"Total: {totalFood:.2f}\n")
+	report.write(f"Total: ${totalFood:.2f}\n")
 
 #prints out actual report
 print(f"Report has been written to {foodReport}")
