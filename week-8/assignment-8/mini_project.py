@@ -14,16 +14,17 @@ try:
 		#will be filled out later
 		skippedRows = []
 		cleanData = []
-
+		
+		#Goes through each row
 		for rowNum, row in enumerate(reader, start=1):
-			rowsAttempted +1
-
+			rowsAttempted += 1
+			#Will skip rows
 			if None in row:
-				rowsSkipped +1
+				rowsSkipped += 1
 				skippedRows.append(f"Row {rowNum} skipped")
 				continue
 
-			try:
+			try: 	#the expected column from the file
 				columnsExpected = ['name', 'category', 'amount']
 				for c in columnsExpected:
 					if c not in row:
@@ -32,12 +33,18 @@ try:
 				name = row['name']
 				category = row['category']
 				amountStr = row['amount']
-
+				#turns amount to float value
 				amount = float(amountStr)
 				
+				#organizes clean data as such
 				rowsParsed += 1
-				cleanData.append(f"{name}, {category}, ${amount:.2f}")
+				cleanData.append({
+					"name": name,
+					"category": category,
+					"amount": amount
+				})
 
+			#Will skip if there was a Value OR Key error and print it out
 			except ValueError as e:
 				rowsSkipped += 1
 
@@ -46,8 +53,9 @@ try:
 
 			except KeyError as e:
 				rowsSkipped += 1
-				skippedRows.append(f"Row {rowNum} KeyError")
+				skippedRows.append(f"Row {rowNum}: KeyError")
 
+#prints this out if there was an error finding the file
 except FileNotFoundError:
 	print(f"Error: The file {filePath} not found")
 	exit(1)
