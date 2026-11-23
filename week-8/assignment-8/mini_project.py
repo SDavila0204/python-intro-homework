@@ -30,7 +30,7 @@ try:
 						raise KeyError(c)
 
 				name = row['name']
-				category = row['Category']
+				category = row['category']
 				amountStr = row['amount']
 
 				amount = float(amountStr)
@@ -48,7 +48,7 @@ try:
 				rowsSkipped += 1
 				skippedRows.append(f"Row {rowNum} KeyError")
 
-except fileNotFoundError:
+except FileNotFoundError:
 	print(f"Error: The file {filePath} not found")
 	exit(1)
 
