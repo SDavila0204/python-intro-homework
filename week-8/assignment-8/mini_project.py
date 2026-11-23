@@ -10,11 +10,11 @@ try:
 		rowsAttempted = 0
 		rowsParsed = 0
 		rowsSkipped = 0
-		
+
 		#will be filled out later
 		skippedRows = []
 		cleanData = []
-		
+
 		#Goes through each row
 		for rowNum, row in enumerate(reader, start=1):
 			rowsAttempted += 1
@@ -35,7 +35,7 @@ try:
 				amountStr = row['amount']
 				#turns amount to float value
 				amount = float(amountStr)
-				
+
 				#organizes clean data as such
 				rowsParsed += 1
 				cleanData.append({
