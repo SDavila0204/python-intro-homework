@@ -1,0 +1,15 @@
+#Requirements.txt content:
+#Brotli==1.1.0
+#certifi==2025.8.3
+#charset-normalizer==3.4.3
+#idna==3.10
+#mutagen==1.47.0
+#pycryptodomex==3.23.0
+#requests==2.34.2
+#urllib3==2.5.0
+#websockets==15.0.1
+#yt-dlp==2025.9.5
+
+import requests
+
+print(f"Requests Version: {requests.__version__}")
